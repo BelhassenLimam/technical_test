@@ -9,41 +9,41 @@ import Foundation
 
 protocol APIEndpoint {
     var baseURL: URL { get }
+    var header: [String: String] { get }
     var path: String { get }
     var method: HTTPMethod { get }
     var parameters: [String: Any]? { get }
 }
 
 enum ApiRouting: APIEndpoint {
-    case getAllLeagues
-    case getAllTeams(leagueName: String)
+    case getAllStories
     
     var baseURL: URL {
-        return URL(string: ApiConstants.BASE_URL + ApiConstants.ApiKey)!
+        return URL(string: ApiConstants.BASE_URL)!
+    }
+    
+    var header: [String : String] {
+        return [ApiConstants.authorization: ApiConstants.ApiKey]
     }
     
     var path: String {
         switch self {
-        case .getAllLeagues:
-            return "/all_leagues.php"
-        case .getAllTeams:
-            return "/search_all_teams.php"
+        case .getAllStories:
+            return "/search"
         }
     }
     
     var method: HTTPMethod {
         switch self {
-        case .getAllLeagues, .getAllTeams:
+        case .getAllStories:
             return .get
         }
     }
     
     var parameters: [String: Any]? {
         switch self {
-        case .getAllLeagues:
-            return nil
-        case .getAllTeams(let leagueName):
-            return ["l": leagueName]
+        case .getAllStories:
+            return ["query": "nature", "per_page":"80"]
         }
     }
 }

@@ -1,7 +1,0 @@
-//
-//  HomeViewController.swift
-//  technical_test
-//
-//  Created by Belhassen LIMAM on 08/03/2025.
-//
-

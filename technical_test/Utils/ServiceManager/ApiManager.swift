@@ -18,6 +18,7 @@ class URLSessionAPIClient<EndpointType: APIEndpoint>: APIClient {
         let url = endpoint.baseURL.appendingPathComponent(endpoint.path)
         var request = URLRequest(url: url)
         request.httpMethod = endpoint.method.rawValue
+        request.allHTTPHeaderFields = endpoint.header
         if endpoint.parameters != nil {
             request.url?.append(queryItems: queryItems(dictionary: endpoint.parameters!))
         }

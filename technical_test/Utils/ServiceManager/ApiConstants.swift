@@ -9,9 +9,9 @@ import Foundation
 import Combine
 
 struct ApiConstants {
-    static let BASE_URL = "https://www.thesportsdb.com/api/v1/json"
-    static let ApiKey = "/50130162"
-    static let AllLeagues = "/all_leagues.php"
+    static let BASE_URL = "https://api.pexels.com/v1"
+    static let ApiKey = "jTsuYSkJ8gCr8uKHIKX9UuK5XZCDuwQKf7qlvpcaRU27XythiCDvbwPa"
+    static let authorization: String = "Authorization"
 }
 enum HTTPMethod: String {
     case options = "OPTIONS"
