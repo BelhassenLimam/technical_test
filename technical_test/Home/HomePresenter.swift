@@ -9,7 +9,7 @@ import Foundation
 
 protocol HomePresenting {
     func presentLoading()
-    func present(storiesData: Stories)
+    func present(storiesData: [Home.Story])
     func presentError(error: Home.State.Error)
 }
 
@@ -22,7 +22,7 @@ final class HomePresenter: Presenting, ObservableObject {
 }
 
 extension HomePresenter: HomePresenting {
-    func present(storiesData: Stories) {
+    func present(storiesData: [Home.Story]) {
         state = .loaded(stories: storiesData)
     }
 

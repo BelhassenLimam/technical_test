@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B71F5D91-543A-45BC-9561-832D56F8B9A5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "technical_test/Home/HomeInteractor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "fetchStories()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "0A019756-84D0-4C7F-9527-8DED77D54C0E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -114,36 +98,6 @@
             endingLineNumber = "31"
             landmarkName = "request(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1CB84113-0141-4C2B-8064-2287FFC295B1 - 9359fdd1b8dca39f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Foundation.Data, __C.NSURLResponse) throws -&gt; Foundation.Data in technical_test.URLSessionAPIClient.request&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Decodable&gt;(&#x3c4;_0_0) -&gt; Combine.AnyPublisher&lt;&#x3c4;_1_0, Swift.Error&gt;"
-                  moduleName = "technical_test.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/belhassenlimam/Documents/Projets/technical_test/technical_test/Utils/ServiceManager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31">
-               </Location>
-               <Location
-                  uuid = "1CB84113-0141-4C2B-8064-2287FFC295B1 - 9359fdd1b8dca39f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Foundation.Data, __C.NSURLResponse) throws -&gt; Foundation.Data in technical_test.URLSessionAPIClient.request&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Decodable&gt;(&#x3c4;_0_0) -&gt; Combine.AnyPublisher&lt;&#x3c4;_1_0, Swift.Error&gt;"
-                  moduleName = "technical_test.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/belhassenlimam/Documents/Projets/technical_test/technical_test/Utils/ServiceManager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -240,36 +194,6 @@
             endingLineNumber = "28"
             landmarkName = "request(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "2B93345B-D2AB-41D7-8944-7CF4434FA0C1 - d507c43e2409972f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "technical_test.URLSessionAPIClient.request&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Decodable&gt;(&#x3c4;_0_0) -&gt; Combine.AnyPublisher&lt;&#x3c4;_1_0, Swift.Error&gt;"
-                  moduleName = "technical_test.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/belhassenlimam/Documents/Projets/technical_test/technical_test/Utils/ServiceManager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28">
-               </Location>
-               <Location
-                  uuid = "2B93345B-D2AB-41D7-8944-7CF4434FA0C1 - 9359fdd1b8dca232"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Foundation.Data, __C.NSURLResponse) throws -&gt; Foundation.Data in technical_test.URLSessionAPIClient.request&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Decodable&gt;(&#x3c4;_0_0) -&gt; Combine.AnyPublisher&lt;&#x3c4;_1_0, Swift.Error&gt;"
-                  moduleName = "technical_test.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/belhassenlimam/Documents/Projets/technical_test/technical_test/Utils/ServiceManager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

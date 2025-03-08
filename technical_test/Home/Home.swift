@@ -12,7 +12,7 @@ enum Home {
 
     enum State {
         case loading
-        case loaded(stories: Stories)
+        case loaded(stories: [Home.Story])
         case error(Error)
 
         struct Error {

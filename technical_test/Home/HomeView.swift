@@ -16,7 +16,7 @@ struct HomeView<Interactor: HomeInteracting>: View{
     init(store: @escaping () -> Store) {
         _store = StateObject(wrappedValue: store())
     }
-
+    
     var body: some View {
         switch store.state() {
         case .loading:
@@ -26,7 +26,49 @@ struct HomeView<Interactor: HomeInteracting>: View{
         case .error(let error):
             Text("erreur")
         case .loaded(let stories):
-            Text("Données reçu")
+            post(stories)
+        }
+    }
+
+    func post(_ listStories: [Home.Story]) -> some View {
+        ScrollView{
+            ForEach(listStories, id: \.id) { story in
+                let url = URL(string:story.url)!
+                VStack(alignment: .leading, spacing: 15) {
+                    AsyncImage(url: url,
+                               placeholder: { Text("image_loading") })
+                        .scaledToFit()
+                        .frame(width: 200, height: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .fixedSize()
+                    
+                    HStack {
+                        HStack(spacing: 3) {
+                            Image(systemName: "heart")
+                        }
+                        Spacer()
+                        HStack {
+                            Image(systemName: "text.bubble")
+                        }
+                        Spacer()
+                        HStack {
+                            Image(systemName: "eye")
+                        }
+                        Spacer()
+                        HStack {
+                            Image(systemName: "bookmark")
+                        }
+                    }
+                    .font(.callout)
+                    
+                    Text(story.alt)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
+                        .font(.callout)
+                        .foregroundColor(.gray)
+                }
+                .padding(.leading, 55)
+            }
         }
     }
 }

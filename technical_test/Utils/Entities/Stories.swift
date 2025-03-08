@@ -9,7 +9,7 @@ import Foundation
 
 class Stories: Codable {
     let page, perPage: Int?
-    let photos: [Photo]?
+    let photos: [Story]?
     let totalResults: Int?
     let nextPage: String?
 
@@ -21,7 +21,7 @@ class Stories: Codable {
         case nextPage = "next_page"
     }
 
-    init(page: Int?, perPage: Int?, photos: [Photo]?, totalResults: Int?, nextPage: String?) {
+    init(page: Int?, perPage: Int?, photos: [Story]?, totalResults: Int?, nextPage: String?) {
         self.page = page
         self.perPage = perPage
         self.photos = photos
@@ -31,7 +31,7 @@ class Stories: Codable {
 }
 
 // MARK: - Photo
-class Photo: Codable {
+class Story: Codable {
     let id, width, height: Int?
     let url: String?
     let photographer: String?

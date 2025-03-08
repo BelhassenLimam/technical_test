@@ -21,7 +21,7 @@ final class HomeInteractor: ObservableObject, getStoriesWorking {
     }
     
     private var cancellables = Set<AnyCancellable>()
-    @Published var listStories: Stories?
+    @Published var listStories: [Home.Story]?
     private let presenter: HomePresenting
 
     init(
@@ -47,14 +47,30 @@ private extension HomeInteractor {
         fetchStories()
     }
     
+    private func stateStoriesList(listStories: [Story]) -> [Home.Story] {
+        let stateStoriesList: [Home.Story] = listStories.map { story in
+            
+            return Home.Story(
+                id: story.id ?? 0,
+                url: story.src?.medium ?? "",
+                photographer: story.photographer ?? "",
+                photographerURL: story.photographerURL ?? "",
+                alt: story.alt ?? ""
+            )
+        }
+        
+        return stateStoriesList
+    }
+    
     func fetchStories() {
         getAllStories()
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { data in
                 
             }, receiveValue: {[weak self] response in
-                self?.listStories = response
-                self?.presenter.present(storiesData: response)
+                guard let list = response.photos else { return }
+                self?.listStories = self?.stateStoriesList(listStories: list)
+                self?.presenter.present(storiesData: self?.listStories ?? [])
                 
             }).store(in: &cancellables)
     }
